@@ -9,12 +9,13 @@ void cleanup(HWND hWnd)
 	//system("taskkill /F /IM DesignToolsServer.exe /T >nul 2>&1");
 }
 
-HWND hWnd = FindWindowA(NULL, "License Activation Required");
 
 int main() 
 {
 while (true) 
 {
+	HWND hWnd = FindWindowA(NULL, "License Activation Required");
+
 		if (hWnd)
 		{
 			ShowWindow(hWnd, SW_HIDE);
